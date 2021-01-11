@@ -1,15 +1,9 @@
-//import { storyline } from './storyline.js';
-
-const storyline = {
-  part1: "You are part of the SoulWorker gaming club, along with three friends who are girls, two are your seniors and one is your junior. It is after school now and so you go to the club room for club activities. \n ",
-  part2: "You open the door and inside, you find Itsuki, Shiro, and Arua. All of them are on their computers, playing SoulWorker. All of them look up to you. \n"
-}
-
+import { storyline } from './storyline.js';
 
 const parent = document.getElementById('story');
 const button = document.createElement('button');
 
-function start() {
+document.getElementById("start").addEventListener('click', () => {
   let name = prompt("What will be your character's name?");
   document.getElementById('charName').innerHTML = `Your character's name is ${name}.`;
   /*TODO
@@ -17,7 +11,7 @@ function start() {
   */
   console.log(name);
   story(name);
-}
+});
 
 // Function that creates a button and appends it
 const createButton = () => {
